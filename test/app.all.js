@@ -10,13 +10,6 @@ describe('app.all()', function(){
       res.end(req.method);
     });
 
-    request(app)
-    .put('/tobi')
-    .expect('PUT', function(){
-      request(app)
-      .get('/tobi')
-      .expect('GET', done);
-    });
   })
 
   it('should run the callback for a method just once', function(done){
